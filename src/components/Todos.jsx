@@ -70,22 +70,22 @@ function AddTodo() {
           borderRadius: "10px",
         }}
       >
-        <InputGroup size="md">
+        <InputGroup size="sm">
           <Input
             pr="4.5rem"
             type="text"
-            placeholder="AGREGA UN VIDEO-JUEGO"
+            placeholder="AGREGA UN SNEAKER"
             aria-label="Add a todo item"
             value={item} // Vincula el valor del campo al estado item
             onChange={handleInput}
-            borderRadius="10px"
+            borderRadius="2px"
             fontSize="1rem"
             py="0.5rem"
             px="1rem"
             border="2px solid #1ca0f2"
             bg="white"
             color="black"
-            fontFamily="'Press Start 2P', cursive"
+            
           />
         </InputGroup>
       </form>
@@ -120,7 +120,7 @@ function UpdateTodo({ item, id }) {
       <Button
         h="2rem" // Aumentar la altura
         fontSize="1rem" // Aumentar el tamaño de la fuente
-        fontWeight="bold" // Texto en negrita
+        // Texto en negrita
         color="white" // Color del texto
         bg="#5eb30d" // Color de fondo dorado, típico de los arcades
         borderRadius="10px" // Esquinas redondeadas
@@ -131,16 +131,16 @@ function UpdateTodo({ item, id }) {
         }}
         size="sm"
         onClick={onOpen}
-        fontFamily="'Press Start 2P', cursive" // Tipo de letra de estilo de videojuegos
+        // Tipo de letra de estilo de videojuegos
         textTransform="uppercase" // Convertir texto a mayúsculas
       >
-        ACTUALIZAR JUEGO
+        Actualizar Tenis
       </Button>
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader> ACTUALIZAR JUEGO</ModalHeader>
+          <ModalHeader> Actualizar modelo</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <InputGroup size="md">
@@ -159,7 +159,7 @@ function UpdateTodo({ item, id }) {
             <Button
               h="2rem" // Increase the height
               fontSize="1rem" // Increase the font size
-              fontWeight="bold" // Make the text bold
+               // Make the text bold
               color="white" // Color del texto
               bg="#5eb30d" // Color de fondo
               borderRadius="10px" // Esquinas redondeadas
@@ -170,10 +170,10 @@ function UpdateTodo({ item, id }) {
               }}
               size="sm"
               onClick={updateTodo}
-              fontFamily="'Press Start 2P', cursive" // Fuente de estilo de videojuegos
+               // Fuente de estilo de videojuegos
               textTransform="uppercase" // Convertir texto a mayúsculas
             >
-              ACTUALIZAR JUEGO
+              Actualizar zapato
             </Button>
           </ModalFooter>
         </ModalContent>
@@ -200,7 +200,7 @@ function DeleteTodo({ id }) {
     <Button
       h="2rem" // Aumentar la altura
       fontSize="1rem" // Aumentar el tamaño de la fuente
-      fontWeight="bold" // Texto en negrita
+      // Texto en negrita
       color="white" // Color del texto
       bg="#d50001" // Color de fondo, típico de los arcades
       borderRadius="10px" // Esquinas redondeadas
@@ -210,11 +210,11 @@ function DeleteTodo({ id }) {
         boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.2)", // Sombra al pasar el cursor
       }}
       size="sm"
-      fontFamily="'Press Start 2P', cursive" // Tipo de letra de estilo de videojuegos
+       // Tipo de letra de estilo de videojuegos
       textTransform="uppercase" // Convertir texto a mayúsculas
       onClick={deleteTodo}
     >
-      ELIMINAR JUEGO
+      Eliminar Tenis
     </Button>
   );
 }
@@ -251,7 +251,7 @@ export default function Todos() {
   // REPLACE THE RETURN WITH A NEW AFTER ADDING THE PUT ROUTE
   return (
     <Box
-      backgroundImage="url('https://static.vecteezy.com/system/resources/previews/007/641/793/non_2x/pixel-art-arcade-game-background-free-vector.jpg')"
+      backgroundImage="url('https://pappos.mx/cdn/shop/products/tenis-vans-old-skool-blanco-para-mujer-van1340-divisioncalzado-vans-blanco-245-778012.jpg?v=1682788689')"
       p={4}
       minHeight="130vh" // Asegura que el contenedor tenga al menos el alto del viewport
       textAlign="center" // Centra el contenido horizontalmente
@@ -270,6 +270,7 @@ export default function Todos() {
           <Stack spacing={5}>
             {todos.map((todo) => (
               <TodoHelper
+              text="white"
                 key={todo.id} // Agrega un key para cada elemento en el map
                 item={todo.item}
                 id={todo.id}

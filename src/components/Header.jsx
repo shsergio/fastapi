@@ -11,7 +11,7 @@ const Header = () => {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    fontFamily: "Press Start 2P, cursive", // Utilizando una fuente de estilo de videojuegos
+// Utilizando una fuente de estilo de videojuegos
     textTransform: "uppercase", // Convertir texto a mayúsculas
   };
 
@@ -25,9 +25,9 @@ const Header = () => {
   return (
     <header style={arcadeStyle}>
       <div>
-        <Heading as="h1" style={headingStyle} fontFamily="'Press Start 2P', cursive" // Fuente de estilo de videojuegos
+        <Heading as="h1" style={headingStyle}// Fuente de estilo de videojuegos
 >
-          Arcade Center
+          Tenisitos VIP
         </Heading>
       </div>
     </header>
